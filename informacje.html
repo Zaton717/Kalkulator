@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator</title>
+    <link rel="stylesheet" href="css/styl.css">
+    <script src="scripts/informacje.js"></script>
+</head>
+<body>
+    <header>
+        <img id="logo" src="img/logo.png">
+        <h1>Kalkulator kredytu</h1>
+        <a href="kontakt.html" class="kontakt">KONTAKT</a>
+        <a href="wspolprace.html" class="przycisk">WSPÓŁPRACE</a>
+        <a href="informacje.html" class="przycisk" id="aktualnaStrona">INFORMACJE</a>
+        <a href="index.html" class="home">HOME</a>
+    </header>
+    <main>
+        <div id="gora">
+            <div id="marginesy">
+                <p id="wypis"></p>
+            </div>
+        </div>
+        <div id="dol">
+            <input type="button" class="informacje" value="KREDYT" onClick="kredyt();">
+            <input type="button" class="informacje" value="OPROCENTOWANIE" onClick="oprocentowanie();">
+            <input type="button" class="informacje" value="UBEZPIECZENIE" onClick="ubezpieczenie();">
+            <input type="button" class="informacje" value="PROWIZJA" onClick="prowizja();">
+            <input type="button" class="informacje" value="NADPŁATA" onClick="nadplata();">
+            <input type="button" class="informacje" value="KURSY" onClick="kursy();">
+        </div>
+    </main>
+    <footer>
+        <a id="lStopka">Jakub Zatoń IVbP</a> <a id="pStopka">2022 - 2023 © Wszelkie prawa zastrzeżone.</a>
+    </footer>
+</body>
+</html>

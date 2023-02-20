@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator</title>
+    <link rel="stylesheet" href="css/styl.css">
+    <script src="scripts/suwak.js"></script>
+    <script src="scripts/kalkuluj.js"></script>
+</head>
+<body>
+    <header>
+        <img id="logo" src="img/logo.png">
+        <h1>Kalkulator kredytu</h1>
+        <a href="kontakt.html" class="kontakt">KONTAKT</a>
+        <a href="wspolprace.html" class="przycisk" >WSPÓŁPRACE</a>
+        <a href="informacje.html" class="przycisk">INFORMACJE</a>
+        <a href="index.html" class="home" id="aktualnaStrona">HOME</a>
+        
+        
+    </header>
+    <main>
+        <div id="lewo">
+            <form>
+                <br>
+                <p><p>Okres spłaty: <a id="wartoscSuwaka">1 rok</a></p>
+                <input type="range" value="1" max="35" min="1" id="splata" name="splata" oninput="suwak();"></p>
+                <div id="lewoForm">
+                <p><p>Kwota kredytu:</p>
+                <input type="text" id="kwota" name="kwota" ></p>
+                <p><p>Oprocentowanie: [%]</p>
+                <input type="text" id="oprocentowanie" name="oprocentowanie" ></p>
+                </div>
+                <div id="prawoForm">               
+                <p><p>Prowizja: [%]</p>
+                <input type="text" id="prowizja" name="prowizja" ></p>
+                <p><p>Nadpłata:</p>
+                <input type="text" id="nadplata" name="nadplata" ></p>
+                </div><br>
+                <p>Waluta: <select id="waluta" name="waluta">
+                    <option value="pln">PLN</option>
+                    <option value="eur">EUR</option>
+                    <option value="usd">USD</option>
+                    <option value="gbp">GBP</option>
+                    <option value="chf">CHF</option>
+                </select></p>
+                <p>Ubezpieczenie: (nieobowiązkowe)<br>
+                    <span>1%</span>
+                        <input type="radio" id="ubezpieczenie" name="ubezpieczenie" value="0.01"><br>
+                    <span>2%</span>
+                        <input type="radio" id="ubezpieczenie" name="ubezpieczenie" value="0.02"><br>
+                    <span>3%</span>
+                        <input type="radio" id="ubezpieczenie" name="ubezpieczenie" value="0.03"><br>
+                </p>
+                <input id="submit" type="button" value="OBLICZ" onClick="kalkulacja();">
+            </form>
+        </div>
+        <div id="prawo">
+            <form>
+                <p><p>Miesięczna rata:</p>
+                <input type="text" id="rata" name="rata" readonly></p>
+                <p><p>Łączna kwota do spłaty:</p>
+                <input type="text" id="kwotaSplaty" name="kwotaSplaty" readonly></p>
+                <p><p>Koszt kredytu:</p>
+                <input type="text" id="koszt" name="koszt" readonly></p>
+                <p><p>Miesięczna rata w walucie kredytu:</p>
+                <input type="text" id="rataWaluta" name="rataWaluta" readonly></p>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <a id="lStopka">Jakub Zatoń IVbP</a> <a id="pStopka">2022 - 2023 © Wszelkie prawa zastrzeżone.</a>
+    </footer>
+</body>
+</html>

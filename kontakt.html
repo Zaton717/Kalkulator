@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator</title>
+    <link rel="stylesheet" href="css/styl.css">
+    <script src="scripts/suwak.js"></script>
+    <script src="scripts/kalkuluj.js"></script>
+    <script src="scripts/mail.js"></script>
+</head>
+<body>
+    <header>
+        <img id="logo" src="img/logo.png">
+        <h1>Kalkulator kredytu</h1>
+        <a href="kontakt.html" id="aktualnaStrona" class="kontakt">KONTAKT</a>
+        <a href="wspolprace.html" class="przycisk" >WSPÓŁPRACE</a>
+        <a href="informacje.html" class="przycisk">INFORMACJE</a>
+        <a href="index.html" class="home" >HOME</a>
+        
+        
+    </header>
+    <main>
+        <div id="lewo">
+            <div id="formularz">
+                <form id="message"  method="post" enctype="text/plain">
+    
+                    <p><label for="imie">Imię:</label><br>
+                        <input class="pola" id="s1" type="text" name="imie" maxlength="40" required><br></p>
+    
+                    <p><label for="nazwisko">Nazwisko:</label><br>
+                        <input class="pola" id="s2" type="text" name="nazwisko" maxlength="40" required><br></p>
+
+                    <p><label for="telefon">Telefon:</label><br>
+                        <input class="pola" id="s3" type="text" name="telefon" maxlength="9" required><br></p>
+
+                    <p><label for="email">Adres e-mail:</label><br>
+                        <input class="pola" id="s4" type="text" name="email" maxlength="40" required><br></p>       
+    
+                    <p><label for="problem">Twój problem:</label><br>
+                        <textarea class="pola" id="s5" name="problem" required></textarea><br></p>  
+
+                    <p><input id="submit" type="reset" value="RESET">
+                        <input id="submit" type="submit" value="WYŚLIJ" onClick="sendMail();">
+                    </p>
+    
+                </form>
+                <br>
+            <br>
+            <br>
+            </div>
+        </div>
+        <div id="prawo">
+            <p><h2>Skontaktuj się z nami!</h2></p>
+            <p>Znalazłeś błąd na naszej stronie internetowej lub w obliczaniu kredytu?<br>
+            Natychmiast zgłoś znalezioną usterkę do nas. Zapraszamy do kontaktu mailowego lub telefonicznego. Jesteśmy dostępni od poniedziałku do piątku w godzinach 8.00 - 15.00<br><br></p>
+            <p><img id="email" src="img/email.png"><br>
+            jzaton1@zse-e.edu.pl<br></p>
+            <p><img id="telefon" src="img/telefon.png"><br>
+            +48 111 222 333<br></p>
+
+        </div>
+    </main>
+    <footer>
+        <a id="lStopka">Jakub Zatoń IVbP</a> <a id="pStopka">2022 - 2023 © Wszelkie prawa zastrzeżone.</a>
+    </footer>
+</body>
+</html>
